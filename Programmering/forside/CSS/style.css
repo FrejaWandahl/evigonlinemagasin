@@ -1,0 +1,271 @@
+/* Projekt: Online Magasin - Freja Wandahl  */
+
+/* Variabler: genbruges og gør designvalg enkle */
+:root {
+  /* farver */
+  --white: #ffffff;
+  --black: #000000;
+  --brun: #6f4f35;
+  --lightbrown: #d2bfa1;
+  --beige: #eee5d3;
+  --blue: #ebf0f9;
+  --yellow: #f1e99f;
+  --grey: #cac6ba;
+  --lightgrey: #eae9e7;
+  --lightyellow: #fcfbec;
+}
+
+/* baggrundsbillederne styles */
+body {
+  background-image: url('forsidebilleder-kopi/mockup-kopi 3.png'),
+  url('forsidebilleder-kopi/forside2.png'),
+  url('footer-kopi 2/footer baggrund.png');
+  background-position: center top, center center , center bottom;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 100%;
+}
+
+
+/* Typografi styles */
+  h1 {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  color: var(--brun);
+  font-size: 50px;
+  padding-top: 50px;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    color: var(--brun);
+    font-size: 25px;
+  }
+
+  h3{
+    font-size: 26px;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--brun);
+    font-weight: 400;
+    text-align: left;
+  }
+
+  h4 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--brun);
+    font-size: 50px;
+  }
+
+  h5 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    color: var(--brun);
+    font-size: 30px;
+  }
+
+  h6 {
+    background-position: center;
+    text-align: left;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    color: var(--brun);
+    font-size: 30px;
+  }
+
+  p{
+    color: var(--brun);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 25px;
+  }
+
+
+/* Logo i venstre hjørne styles  */
+#logo
+{
+  padding-top: 20px;
+  padding-left: 20px;
+  position: absolute;
+}
+
+
+/* Menulinje styles */
+.menu{
+  background-color: transparent;
+  text-align: right;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+}
+
+.menu ul li{
+  width: auto;
+  margin: 20px;
+  padding: 10px;
+}
+
+.menu ul li a{
+  text-decoration: none;
+  color: var(--brun);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px
+}
+
+.mode, .menu ul li:hover{
+  background-color: var(--beige);
+}
+
+
+/* dropdown menu styles  */
+.submenu1{
+  display: none;
+}
+
+.menu ul li:hover .submenu1{
+  display: block;
+  position: absolute;
+  background-color: var(--beige);
+  margin-top: 5px;
+  margin-left: -10px;
+}
+
+.menu ul li:hover .submenu1 ul{
+  display: block;
+  margin: 10px;
+}
+
+.menu ul li:hover .submenu1 ul li{
+  width: 150px;
+  padding: 10px;
+  border-bottom: 2px solid var(--white);
+  background: transparent;
+  text-align: left;
+}
+
+.menu ul li:hover .submenu1 ul li a:hover{
+  color: var(--grey);
+}
+
+/*Velkomst tekst styles*/
+#velkommen {
+  padding-bottom: 100px;
+  padding-top: 20px;
+}
+
+
+
+/*Billeder/artikler styles*/
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.column {
+  flex: 33.33%;
+  padding-top: 10px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.artikel {
+  font-size: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  color: var(--brun);
+  text-align: left;
+}
+
+/*Nyhedsbrev tekst og button styles*/
+.text {
+  text-align: center;
+  padding-right: 200px;
+  padding-left: 200px;
+  padding-bottom: 100px;
+}
+
+.email {
+  background-color: var(--beige);
+  border: none;
+  color: var(--brun);
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.email:hover {opacity: 10}
+.tilmeld:hover {opacity: 10}
+
+.tilmeld {
+  background-color: var(--lightyellow);
+  border: none;
+  color: var(--brun);
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+
+/* Evig founder billede styles med tekst og button styles  */
+.row2 {
+  display: flex;
+  width: 100%;
+  padding-bottom: 280px;
+}
+
+.column2 {
+  flex: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+.læsmere:hover {opacity: 10}
+.læsmere {
+  background-color: var(--blue);
+  border: none;
+  color: var(--brun);
+  padding: 16px 32px;
+  text-align: right;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+
+/* Footer styles  */
+footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--brun);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.row1 {
+  display: flex;
+  width: 100%;
+}
+
+.column1 {
+  flex: 25%;
+  padding-top: 10px;
+  padding-right: 100px;
+  padding-left: 100px;
+}

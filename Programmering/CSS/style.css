@@ -1,0 +1,683 @@
+/* Projekt: Online Magasin - Freja Wandahl  */
+
+/* Variabler: genbruges og gør designvalg enkle */
+:root {
+  /* farver */
+  --white: #ffffff;
+  --black: #000000;
+  --brun: #6f4f35;
+  --lightbrown: #d2bfa1;
+  --beige: #eee5d3;
+  --blue: #ebf0f9;
+  --yellow: #f1e99f;
+  --grey: #cac6ba;
+  --lightgrey: #eae9e7;
+  --lightyellow: #fcfbec;
+}
+
+/* baggrundsbillederne styles */
+body {
+  background-image: url('forsidebilleder-kopi/mockup-kopi 3.png'),
+  url('forsidebilleder-kopi/forside2.png'),
+  url('footer-kopi 2/footer baggrund.png');
+  background-position: center top, center center , center bottom;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 100%;
+}
+
+/* Typografi styles */
+  h1 {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  color: var(--brun);
+  font-size: 50px;
+  padding-top: 10px;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    color: var(--brun);
+    font-size: 25px;
+  }
+
+  h3{
+    font-size: 26px;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--brun);
+    font-weight: 400;
+    text-align: left;
+  }
+
+  h4 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--brun);
+    font-size: 50px;
+  }
+
+  h5 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    color: var(--brun);
+    font-size: 30px;
+  }
+
+  h6 {
+    background-position: center;
+    text-align: left;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    color: var(--brun);
+    font-size: 30px;
+  }
+
+  p{
+    color: var(--brun);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 25px;
+  }
+
+
+/* Logo i venstre hjørne styles  */
+#logo
+{
+  padding-top: 20px;
+  padding-left: 20px;
+  position: absolute;
+}
+
+
+/* Menulinje styles */
+.menu{
+  background-color: transparent;
+  text-align: right;
+  padding-right: 120px;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+}
+
+.menu ul li{
+  width: auto;
+  margin: 20px;
+  padding: 10px;
+}
+
+.menu ul li a{
+  text-decoration: none;
+  color: var(--brun);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px
+}
+
+.mode, .menu ul li:hover{
+  background-color: var(--beige);
+}
+
+
+/* dropdown menu styles  */
+.submenu1{
+  display: none;
+}
+
+.menu ul li:hover .submenu1{
+  display: block;
+  position: absolute;
+  background-color: var(--beige);
+  margin-top: 5px;
+  margin-left: -10px;
+}
+
+.menu ul li:hover .submenu1 ul{
+  display: block;
+  margin: 10px;
+}
+
+.menu ul li:hover .submenu1 ul li{
+  width: 150px;
+  padding: 10px;
+  border-bottom: 2px solid var(--white);
+  background: transparent;
+  text-align: left;
+}
+
+.menu ul li:hover .submenu1 ul li a:hover{
+  color: var(--grey);
+}
+
+/* Footer styles  */
+footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--brun);
+  font-family: 'Cormorant Garamond', serif;
+  padding-top: 200px;
+}
+
+.row1 {
+  display: flex;
+  width: 100%;
+}
+
+.column1 {
+  flex: 25%;
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+
+/*Forside styles under her */
+/*Velkomst tekst styles*/
+#velkommen {
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+/*Nyeste posts tekst styles*/
+.nyeste {
+  text-align: left;
+  color: var(--brun);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  padding-left: 300px;
+  padding-bottom: 10px;
+}
+
+
+/*Billeder/artikler styles forside*/
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.column:hover {opacity: 10}
+.column {
+  flex: 33.33%;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-left: 300px;
+  transition: 0.3s;
+  opacity: 0.9;
+}
+.column21:hover {opacity: 10}
+.column21 {
+  flex: 33.33%;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  transition: 0.3s;
+  opacity: 0.9;
+}
+
+.column22:hover {opacity: 10}
+.column22 {
+  flex: 33.33%;
+  padding-top: 10px;
+  padding-right: 300px;
+  padding-left: 30px;
+  transition: 0.3s;
+  opacity: 0.9;
+}
+
+.artikel {
+  font-size: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  color: var(--brun);
+  text-align: left;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 40px;
+  left: 320px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+.bottom-center {
+  position: absolute;
+  bottom: 40px;
+  left: 620px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 40px;
+  left: 910px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+/*Nyhedsbrev tekst og button styles*/
+.text {
+  text-align: center;
+  padding-right: 200px;
+  padding-left: 200px;
+  padding-bottom: 100px;
+}
+
+.email {
+  background-color: var(--beige);
+  border: none;
+  color: var(--brun);
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.email:hover {opacity: 10}
+.tilmeld:hover {opacity: 10}
+
+.tilmeld {
+  background-color: var(--lightyellow);
+  border: none;
+  color: var(--brun);
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+
+/* Evig founder billede styles med tekst og button styles  */
+.row2 {
+  display: flex;
+  width: 100%;
+  padding-bottom: 5px;
+  background-color: var(--beige);
+}
+
+.column2 {
+  flex: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 5px;
+}
+
+.læsmere:hover {opacity: 10}
+.læsmere {
+  background-color: var(--blue);
+  border: none;
+  color: var(--brun);
+  padding: 16px 32px;
+  text-align: right;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+
+/*Suppe underside styles under her */
+/* Suppe forside billede med tekst  */
+.row3 {
+  display: flex;
+  width: 100%;
+  padding-bottom: 20px;
+  background-color: var(--lightyellow);
+}
+
+.column3 {
+  flex: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 15px;
+  margin-left: 100px;
+  margin-bottom: -15px;
+  margin-right: 10px;
+}
+
+
+/* Opskrift styles  */
+.row6 {
+  display: flex;
+  width: 100%;
+}
+
+.column30 {
+  flex: 50%;
+  padding-top: 100px;
+  padding-left: 100px;
+  text-align: right;
+  font-size: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  color: var(--brun);
+}
+
+.column31 {
+  flex: 50%;
+  padding-top: 100px;
+  padding-left: 30px;
+  padding-bottom: 100px;
+  text-align: left;
+  font-size: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  color: var(--brun);
+}
+
+.column32 {
+  flex: 10%;
+  padding-top: 100px;
+  padding-left: 100px;
+  text-align: right;
+  font-size: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  color: var(--brun);
+}
+
+.column33 {
+  flex: 90%;
+  padding-top: 100px;
+  padding-left: 30px;
+  padding-right: 150px;
+  text-align: left;
+  font-size: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  color: var(--brun);
+}
+
+
+/* 4 billeder styles*/
+.row10 {
+  display:  inline-flex;
+  width: 100%;
+}
+
+.column10 {
+  flex: 25%;
+  padding-top: 10px;
+  margin: 2px;
+}
+
+
+
+
+/*Borddækning underside styles under her */
+
+/* Videoen styles */
+.video {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 100px;
+}
+
+
+/* Natur billede og tekst styles*/
+.row8 {
+  display:  inline-flex;
+  width: 100%;
+  background-color: var(--beige);
+
+}
+
+.column8 {
+  flex: 25%;
+  margin: 2px;
+  text-align: left;
+  font-size: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  color: var(--brun);
+  padding-right: 8px;
+}
+
+
+/* 3 billeder styles*/
+.row9 {
+  display:  inline-flex;
+  width: 100%;
+  padding-top: 180px;
+}
+
+.column9 {
+  flex: 25%;
+  padding-top: 10px;
+  margin: 2px;
+}
+
+/*10 efterårsjakker underside styles under her */
+/* 2 billeder med tekst styles*/
+.row11 {
+  display:  inline-flex;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.column11 {
+  flex: 50%;
+  margin: 20px;
+  padding-left: 150px;
+}
+
+.column12 {
+  flex: 50%;
+  margin: 20px;
+  padding-right: 150px;
+}
+
+.bottom1-left {
+  position: absolute;
+  bottom: -335px;
+  left: 252px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+.bottom1-right {
+  position: absolute;
+  bottom: -335px;
+  left: 788px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+/* 2 billeder med tekst styles*/
+.row13 {
+  display:  inline-flex;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.column13 {
+  flex: 50%;
+  margin: 20px;
+  padding-left: 150px;
+}
+
+.column14 {
+  flex: 50%;
+  margin: 20px;
+  padding-right: 150px;
+}
+
+
+.bottom2-left {
+  position: absolute;
+  bottom: -850px;
+  left: 252px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+.bottom2-right {
+  position: absolute;
+  bottom: -850px;
+  left: 788px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+
+
+/* 2 billeder med tekst styles*/
+.row15 {
+  display:  inline-flex;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.column15 {
+  flex: 50%;
+  margin: 20px;
+  padding-left: 150px;
+}
+
+.column16 {
+  flex: 50%;
+  margin: 20px;
+  padding-right: 150px;
+}
+
+.bottom3-left {
+  position: absolute;
+  bottom: -1364px;
+  left: 252px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+.bottom3-right {
+  position: absolute;
+  bottom: -1364px;
+  left: 788px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+
+/* 2 billeder med tekst styles*/
+.row17 {
+  display:  inline-flex;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.column17 {
+  flex: 50%;
+  margin: 20px;
+  padding-left: 150px;
+}
+
+.column18 {
+  flex: 50%;
+  margin: 20px;
+  padding-right: 150px;
+}
+
+.bottom4-left {
+  position: absolute;
+  bottom: -1880px;
+  left: 252px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+.bottom4-right {
+  position: absolute;
+  bottom: -1880px;
+  left: 788px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+
+
+/* 2 billeder med tekst styles*/
+.row19 {
+  display:  inline-flex;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.column19 {
+  flex: 50%;
+  margin: 20px;
+  padding-left: 150px;
+}
+
+.column20 {
+  flex: 50%;
+  margin: 20px;
+  padding-right: 150px;
+}
+
+.bottom5-left {
+  position: absolute;
+  bottom: -2400px;
+  left: 252px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+.bottom5-right {
+  position: absolute;
+  bottom: -2400px;
+  left: 788px;
+  color: var(--brun);
+  background-color: var(--lightyellow);
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
